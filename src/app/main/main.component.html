@@ -1,2 +1,4 @@
 <h2>Main Level</h2>
-<app-users></app-users>
+<div *ngIf="!this.currentUser">
+    <app-users (updateReg)="updatePage()"></app-users>
+</div>

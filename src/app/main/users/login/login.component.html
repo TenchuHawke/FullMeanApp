@@ -1,1 +1,21 @@
 <h4>Login Level</h4>
+<div>
+    <form (submit)="authUser()">
+        <div>
+            <label for="email">E-Mail:</label>
+            <br>
+            <label for="password">Password: </label>
+        </div>
+        <div>
+            <input type="text" name="email" placeholder="E-Mail" [(ngModel)]="loginUser.email">
+            <br>
+            <input type="password" name="password" placeholder="Password" [(ngModel)]="loginUser.password">
+            <br>
+            <input type="submit" name="Login">
+        </div>
+    </form>
+</div>
+<div>
+    <button id="SwitchButton" (click)="StartReg()">New User Registration</button>
+
+</div>

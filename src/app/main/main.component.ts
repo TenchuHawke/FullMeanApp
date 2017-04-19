@@ -10,11 +10,14 @@ export class MainComponent implements OnInit {
 
   currentUser: User
   // logged in user.
-  constructor() { }
+  constructor() {
+    this.currentUser=null;
+  }
 
   ngOnInit() {
   }
   authUser(){
+    console.log("authUser()")
     //check to see if user exists in session, if so set Current User to the Session User.    
   }
 }

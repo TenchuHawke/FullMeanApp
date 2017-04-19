@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-users',
@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-
-  constructor() { }
+  newUserSwitch : boolean
+  @Output() userLoggedIn = new EventEmitter();
+  constructor() {
+    this.newUserSwitch = false
+  }
 
   ngOnInit() {
   }
 
+  updateSwitch($event) {
+    this.newUserSwitch = $event.value
+    console.log(this.newUserSwitch)
+    this.userLoggedIn.emit()
+  }
 }

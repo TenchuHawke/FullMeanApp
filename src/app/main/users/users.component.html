@@ -1,7 +1,7 @@
 <h3>User Level</h3>
-<div>
-    <app-login></app-login>
+<div *ngIf="!this.newUserSwitch">
+    <app-login [startReg]="newUserSwitch" (updateReg)="updateSwitch($event)"></app-login>
 </div>
-<div>
-    <app-registration></app-registration>
+<div *ngIf="this.newUserSwitch">
+    <app-registration [startReg]="newUserSwitch" (updateReg)="updateSwitch($event)"></app-registration>
 </div>
