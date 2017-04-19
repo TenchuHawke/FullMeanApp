@@ -4,7 +4,7 @@ const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
 const session = require("express-session")
 
-const PORT = 1173
+const PORT = 0991
 let secret = 'ThisIsASecretKey' // string for encryption
 
 var app = express();
